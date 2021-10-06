@@ -1,24 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { AddStock, ViewStock, Sales, Navigation } from "./Comp/index";
+import { stock, Customers, products } from "./Data/index";
+import Calc from "./Data/CalcAPI";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="appContainer">
+        <Navigation />
+        <Switch>
+          <Route exact path="/">
+            <ViewStock  />
+          </Route>
+
+          <Route exact path="/addstock">
+            <AddStock />
+          </Route>
+          <Route exact path="/sales">
+            <Sales products={products} />
+          </Route>
+        </Switch>
+      </div>
+    </Router>
   );
 }
 

@@ -1,0 +1,1 @@
+export let products=["PRODUCT1","PRODUCT2","PRODUCT3"]

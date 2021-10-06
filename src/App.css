@@ -1,38 +1,65 @@
-.App {
-  text-align: center;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.appContainer{
+  width: 100%;
+  height: 100vh;
 }
+/* ----------Navigation bar---------- */
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* ----------View Stock---------- */
+.viewContainer{
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  background: rgba(0,0,0,.1);
+  
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.secContainer{
+  width: 100%;
+  height: 100%;
+}
+/* ----------Add Stock ---------- */
+.addContainer{
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  width: 100%;
+  min-height: 100%;
+  /* background: silver; */
+}
+.addCard{
+  border: 1px solid rgba(0,0,0,.2);
+  width: 70%;
+  height: 50%;
+  padding: 10px;
+  border-radius: 10px;
+  background: rgba(0,0,0,.1);
+  box-shadow: 2px 2px 2px rgba(0,0,0,.1);
+}
+.inputContainer{
+  padding: 5px 0;
+  margin-bottom: 10px;
+}
+/* ----------sales---------- */
+/* ----------navigation---------- */
+
+
+
+
+
+/* ----------global var---------- */
+
+
+
+.error{
+  color: #d9534f;
+}
+.primary{
+  background: #0275d8;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
